@@ -1,0 +1,27 @@
+//To create a Database
+create database student_DB;
+
+use student_DB;
+
+//To create a table and columns. Column1: ID and a primary key with auto increment feature. Columns2: FirstName. Column3: MiddleName with default value as Null. Column3: LastName. Column4:GroupName with specific Check constratints
+create table student_DB.stud_details(ID bigint(200) primary key auto_increment, FirstName varchar(50), MiddleName varchar(50) default null, LastName varchar(50), GroupName varchar(50) check(GroupName in ('MPC', 'BIPC', 'mpc', 'bipc', 'BiPC')));
+
+//To Alter the auto increment number to our desired value
+alter table student_DB.stud_details auto_increment = 101;
+
+//To create a Marks table and columns. To set a foreign key for ID column & apply check constraint for the subjects to be within 0-100 
+create table student_db.stud_marks(ID bigint(200), foreign key (ID) references stud_details(ID), GroupName varchar(50) check(GroupName in ('MPC', 'BIPC', 'mpc', 'bipc', 'BiPC')), Maths double(3,2) check(Maths between 0 and 100) default null, Biology double(3,2) check(Biology between 0 and 100) default null, Physics double(3,2) check(Physics between 0 and 100) default null, Chemistry double(3,2) check(Chemistry between 0 and 100) default null);
+
+//To create a Allocations table and columns.
+create table student_db.stud_alloc (ID bigint(200), foreign key (ID) references stud_details(ID), HostelFees bigint(200), MessFees bigint(200), BookFees bigint(200), Certificates varchar(20) check(Certificates in ('Pending', 'Taken', 'Given')));
+
+//To create a Library table and columns in it. To set the BookId as a primary key for it
+create table student_db.stud_library(ID bigint(200), foreign key (ID) references stud_details(ID), BookID bigint(200) primary key, BookName varchar(500), Given date not null, returned date not null);
+
+//To view the columns/datatypes/Constraints
+desc student_db.stud_details;
+desc student_db.stud_marks;
+desc student_db.stud_alloc;
+desc student_db.stud_library;
+
+
