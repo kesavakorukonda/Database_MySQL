@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap');
+
+body {
+   /* background: #5CDB95;
+    background-image: radial-gradient(#05386B 10px, transparent 1px);
+    background-size: 20px 10px;*/
+    background-image: linear-gradient(45deg, #D8BFD8, #C0C0C0, #BC8F8F, #F0F8FF, #FAEBD7, #00FFFF, #7FFFD4, #708090);
+    margin: auto;
+
+}
+
+.Section1 > h1, span{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    white-space: normal;
+    width: 100%;
+}
+
+.Section1 > h1{
+    font-size: 50px;
+    background-image: linear-gradient(to top, #FFFF00, #FFA500, #FF0000);
+    position: fixed;
+    z-index: 6;
+}
+
+.Section1 > span {
+    display: inline-block;
+    margin-top: 40px;
+    background-image: linear-gradient(to bottom, #FFFF00, #FFA500, #FF0000);
+}
+
+.Section2, .Section3 {
+margin: 50px;
+background-position: center;
+}
+
+.Section2{
+    padding: 0px 0px 00px 500px;
+}
+
+.Section3 > table {
+   /* background : #EDF5E1; */
+   background-image: radial-gradient(Circle at top, #EE82EE, transparent),
+                     radial-gradient(Circle at bottom, #4b0082, transparent),
+                     radial-gradient(Circle at right, #0000FF, transparent),
+                     radial-gradient(Circle at left, #008000, transparent);
+}
+
+.Section3 > table > thead{
+    font-family: 'Bona Nova', serif;
+    font-size: 25px;
+    color: #000000;
+    position: sticky;
+    top: 0;
+    background: #8EE4AF !important;
+}
+
+.Section3{
+    text-shadow: 0.5px 0.5px 0px #000;
+    box-shadow: 2px 3px 5px 3px #000;
+    border-radius: 5px;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.tableBody{
+    font-size: 18px;
+}
+
+.Article1, .Article2{
+    margin: 10px;
+    border: 1px solid;
+    padding: 10px;
+    display: inline-block;
+    width: 25%;
+    box-shadow: 2px 3px 5px 3px #000;
+    background: #379683;
+}
+
+.Genre:checked {
+    color: #fff;
+}
+
+.MovieLink:hover {
+    font-size: 17px;
+}
+.MovieLink:visited {
+    font-color: #00f;
+}
+
+.Article2{
+    padding-top: 16px;
+    padding-bottom: 9px;
+}
+
+#ContactUs{
+    float: left;
+    position: relative;
+    left: 35%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+}
+
+#Comments{
+    float: right;
+    position: relative;
+    right: 35%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #4CAF50;
+}
+
+#ContactUs:hover{
+    background-color: hsl(110, 76%, 81%);
+}
+#Comments:hover{
+    background-color: hsl(110, 76%, 81%);
+}
+
+.CommentElements{
+    float: right;
+    visibility: hidden;
+    position: relative;
+    right: 20.5%;
+    top: 35px;
+    bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    border: solid;
+    left: -290px;
+    padding-right: 70px;
+    border-radius: 10px;
+}
+
+.ContactElements{
+    float: left;
+    position: relative;
+    visibility: hidden;
+    top: 35px;
+    border: solid;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    right: -550px;
+    padding-right: 70px;
+}
+
+.ContactElements:hover{
+    background-color: white;
+}
+
+.CommentElements.active{
+    display: inline-block;
+}
+
+.EmailBox{
+    position: relative;
+    left: 9px;
+}
+
+#OkButton{
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    padding: 1px 54px;
+}
